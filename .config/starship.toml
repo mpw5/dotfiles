@@ -1,0 +1,68 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """[$os$directory$git_branch$git_status]($style)
+$character
+"""
+
+right_format = """
+$kubernetes\
+$docker_context\
+$helm\
+$java\
+$gradle\
+$nodejs\
+$python\
+$ruby\
+$terraform\
+$memory_usage\
+$custom\
+$status\
+$time"""
+
+add_newline = false
+
+[character]
+success_symbol = "[❯](bold #A5D6A7)[❯](bold #FFF59D)[❯](bold #FFAB91)"
+
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "bold cyan"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[gradle]
+symbol = " "
+style = 'bold #FFF59D'
+
+[java]
+symbol = " "
+style = 'bold #A5D6A7'
+
+[nodejs]
+symbol = " "
+style = 'bold #A5D6A7'
+
+[os.symbols]
+Macos = " "
+
+[python]
+symbol = " "
+style = 'bold #A5D6A7'
+
+[ruby]
+symbol = " "
+style = 'bold #FFF59D'
+
+[time]
+disabled = false
+style = 'bold #FFAB91'
+
+[os]
+disabled = false
