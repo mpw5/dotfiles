@@ -12,6 +12,12 @@ plugins=(git kubectl rails)
 
 eval "$(rbenv init - zsh)"
 
+PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
+alias ls="ls --color=always"
+
+eval `dircolors ~/.dircolors`
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

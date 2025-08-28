@@ -21,6 +21,7 @@ $status\
 $time"""
 
 add_newline = false
+command_timeout = 1000
 
 [character]
 success_symbol = "[❯](bold #A5D6A7)[❯](bold #FFF59D)[❯](bold #FFAB91)"
